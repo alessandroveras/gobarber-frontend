@@ -3,21 +3,19 @@ import React from 'react';
 
 // pages
 import SignIn from './pages/SignIn';
-
 import SignUp from './pages/SignUp'; //eslint-disable-line
 
-// contexts
-import { AuthProvider } from './hooks/AuthContext';
+// hooks
+import AppProvider from './hooks';
 
 // app
 import GlobalStyle from './stytles/global';
 
 const App: React.FC = () => (
   <>
-    <AuthProvider>
+    <AppProvider>
       <SignIn />
-      {/* <SignUp /> */}
-    </AuthProvider>
+    </AppProvider>
     <GlobalStyle />
   </>
 );
