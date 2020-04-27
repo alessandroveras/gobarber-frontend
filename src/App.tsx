@@ -1,22 +1,22 @@
 // libs
 import React from 'react';
-
-// pages
-import SignIn from './pages/SignIn';
-import SignUp from './pages/SignUp'; //eslint-disable-line
+import { BrowserRouter as Router } from 'react-router-dom';
 
 // hooks
 import AppProvider from './hooks';
+
+// routes
+import Routes from './routes';
 
 // app
 import GlobalStyle from './stytles/global';
 
 const App: React.FC = () => (
-  <>
+  <Router>
     <AppProvider>
-      <SignIn />
+      <Routes />
     </AppProvider>
     <GlobalStyle />
-  </>
+  </Router>
 );
 export default App;
